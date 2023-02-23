@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">iCoder</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Topics
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Technology</a></li>
+                <li><a class="dropdown-item" href="#">Web Development</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Support</a></li>
+                <li><a class="dropdown-item" href="#">Write Us</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-secondary" type="submit">
+              Search
+            </button>
+          </form>
+          <div class="mx-2">
+            <button
+              class="btn btn-danger"
+              data-bs-toggle="modal"
+              data-bs-target="#loginModal"
+            >
+              Log-in
+            </button>
+          </div>
+          <div>
+            <button
+              class="btn btn-danger"
+              data-bs-toggle="modal"
+              data-bs-target="#signupModal"
+            >
+              Sign-up
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Log-in Modal -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="loginModalLabel">
+              Log-in to iCoder
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"
+                  >Email address</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                />
+                <div id="emailHelp" class="form-text">
+                  We'll never share your email with anyone else.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                />
+              </div>
+              <div class="mb-3 form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="exampleCheck1"
+                />
+                <label class="form-check-label" for="exampleCheck1"
+                  >Check me out</label
+                >
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Log-in</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sign-up Modal -->
+    <div
+      class="modal fade"
+      id="signupModal"
+      tabindex="-1"
+      aria-labelledby="signupModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="signupModalLabel">
+              Get an iCoder account
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form class="row g-3">
+              <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail4" />
+              </div>
+              <div class="col-md-6">
+                <label for="inputPassword4" class="form-label">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="inputPassword4"
+                />
+              </div>
+              
+
+              <div class="row">
+                <div class="col">
+                  <br>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="First name"
+                    aria-label="First name"
+                  />
+                </div>
+                <div class="col">
+                  <br />
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Last name"
+                    aria-label="Last name"
+                  />
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label for="inputAddress2" class="form-label">Address 2</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputAddress2"
+                  placeholder="Apartment, studio, or floor"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="inputCity" class="form-label">City</label>
+                <input type="text" class="form-control" id="inputCity" />
+              </div>
+              <div class="col-md-4">
+                <label for="inputState" class="form-label">State</label>
+                <select id="inputState" class="form-select">
+                  <option selected>Choose...</option>
+                  <option>...</option>
+                </select>
+              </div>
+              <div class="col-md-2">
+                <label for="inputZip" class="form-label">Zip</label>
+                <input type="text" class="form-control" id="inputZip" />
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="gridCheck"
+                  />
+                  <label class="form-check-label" for="gridCheck">
+                    Check me out
+                  </label>
+                </div>
+              </div>
+              
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Create Account</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="carouselExampleFade"
+      class="carousel slide carousel-fade"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="c1.jpg"
+            width="1400px"
+            height="400px"
+            class="d-block w-100"
+            alt="..."
+          />
+          <br />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Welcome to iCoder</h5>
+            <p>Know everything about coding in one website</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img
+            src="img2.jpg"
+            width="1400px"
+            height="400px"
+            class="d-block w-100"
+            alt="..."
+          />
+          <br />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Beginner friendly</h5>
+            <p>Some representative placeholder content for the second slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="img1.jpg"
+            width="1400px"
+            height="400px"
+            class="d-block w-100"
+            alt="..."
+          />
+          <br />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>The Best coding blog</h5>
+
+            <p style="padding-top: 10px">
+              <button type="button" class="btn btn-outline-primary">
+                Technology
+              </button>
+              <button type="button" class="btn btn-outline-info">
+                Web Development
+              </button>
+              <button type="button" class="btn btn-outline-warning">
+                Research
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleFade"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleFade"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <h3 style="text-align: center; padding: 1rem">
+      What skills a Frontend Developer Learn in 2023?
+    </h3>
+
+    <div class="container">
+      <div
+        class="row mb-2"
+        style="padding-top: 2rem; background-color: #e5e7eb"
+      >
+        <div class="col-md-6">
+          <div
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <h3 class="mb-0 text-primary">HTML (HTML 5)</h3>
+              <hr />
+              <p class="card-text mb-auto">
+                What is in a HTML? HTML stands for HyperText Markup Language. It
+                is a standard markup language for web page creation.
+              </p>
+              <a
+                href="https://en.wikipedia.org/wiki/HTML"
+                class="stretched-link"
+                >Continue reading</a
+              >
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img
+                class="bd-placeholder-img"
+                width="280"
+                height="250"
+                src="TN1.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <h3 class="d-inline-block mb-2 text-success">
+                CSS (Bootstrap, Flexbox and Grid)
+              </h3>
+              <hr />
+
+              <p class="mb-auto">
+                Cascading Style Sheets (CSS) is a style sheet language used for
+                describing the presentation of a document written in a markup
+                language such as HTML or XML.
+              </p>
+              <a href="https://en.wikipedia.org/wiki/CSS" class="stretched-link"
+                >Continue reading</a
+              >
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img
+                class="bd-placeholder-img"
+                width="200"
+                height="250"
+                src="TN2.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="row mb-2 my-4"
+        style="padding-right: 2rem; background-color: #f3f4f6"
+      >
+        <div class="col-md-6">
+          <div
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <h3 class="d-inline-block mb-2 text-primary">JavaScript</h3>
+              <hr />
+
+              <p class="card-text mb-auto">
+                JavaScript (JS) is a lightweight, interpreted, or just-in-time
+                compiled programming language with first-class functions.
+              </p>
+              <a
+                href="https://en.wikipedia.org/wiki/JavaScript"
+                class="stretched-link"
+                >Continue reading</a
+              >
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img
+                class="bd-placeholder-img"
+                style="padding-top: 2rem"
+                width="200"
+                height="250"
+                src="TN3.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <h3 class="d-inline-block mb-2 text-success">React.js</h3>
+              <hr />
+
+              <p class="mb-auto">
+                React (also known as React.js or ReactJS) is a free and
+                open-source front-end JavaScript library for building user
+                interfaces based on components.
+              </p>
+              <a
+                href="https://en.wikipedia.org/wiki/React_(JavaScript_library)"
+                class="stretched-link"
+                >Continue reading</a
+              >
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img
+                class="bd-placeholder-img"
+                width="250"
+                height="250"
+                src="TN4.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="row mb-2 my-4"
+        style="padding-right: 2rem; background-color: #e5e7eb"
+      >
+        <div class="col-md-6">
+          <div
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <h3 class="d-inline-block mb-2 text-primary">Node.js</h3>
+              <hr />
+
+              <p class="card-text mb-auto">
+                Node.js is a cross-platform, open-source server environment that
+                can run on Windows, Linux, Unix, macOS, and more.
+              </p>
+              <a
+                href="https://en.wikipedia.org/wiki/Node.js"
+                class="stretched-link"
+                >Continue reading</a
+              >
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img
+                class="bd-placeholder-img"
+                width="220"
+                height="250"
+                src="TN5.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <h3 class="d-inline-block mb-2 text-success">API</h3>
+              <hr />
+
+              <p class="mb-auto">
+                An application programming interface (API) is a way for two or
+                more computer programs to communicate with each other.
+              </p>
+              <a href="https://en.wikipedia.org/wiki/API" class="stretched-link"
+                >Continue reading</a
+              >
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img
+                style="padding: 2rem"
+                class="bd-placeholder-img"
+                width="300"
+                height="300"
+                src="TN6.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="container">
+      <p class="float-end"><a href="#">Back to top</a></p>
+      <p>
+        © 2022-2023 iCoder, Inc. <a href="#">Privacy</a> · <a href="#">Terms</a>
+      </p>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
